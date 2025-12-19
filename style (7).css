@@ -1,0 +1,61 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=JetBrains+Mono:wght@400;700&display=swap');
+
+:root {
+  --discord-blurple: #5865f2;
+  --discord-green: #23a559;
+  --discord-yellow: #f0b232;
+  --discord-red: #f23f43;
+  --bg-primary: #313338;
+  --bg-secondary: #2b2d31;
+  --bg-tertiary: #1e1f22;
+  --bg-quaternary: #232428;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-tertiary);
+  color: #dbdee1;
+  margin: 0;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--bg-tertiary);
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #4e5058;
+}
+
+.terminal-line {
+  font-family: 'JetBrains Mono', monospace;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.nuke-pulse {
+  animation: pulse-red 2s infinite;
+}
+
+@keyframes pulse-red {
+  0% { box-shadow: 0 0 0 0 rgba(242, 63, 67, 0.4); }
+  70% { box-shadow: 0 0 0 15px rgba(242, 63, 67, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(242, 63, 67, 0); }
+}
+
+.status-online { background-color: var(--discord-green); }
+.status-idle { background-color: var(--discord-yellow); }
+.status-dnd { background-color: var(--discord-red); }
+.status-offline { background-color: #80848e; }
